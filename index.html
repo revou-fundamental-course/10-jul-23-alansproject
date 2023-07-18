@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="shortcut icon" href="./images/logo.svg?v=2" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <section class="left-nav">
+            <img src="./images/logo.svg" alt="Scales Logo">
+            <h3 style="font-weight: 600;">BMI-Scales</h3>
+        </section>
+
+        <section class="right-nav">
+            <a href="#Home">Home</a>
+            <a href="#calculation">Hitung BMI</a>
+            <a href="#Result">Hasil</a>
+        </section>
+
+        <section class="menu-mobile">
+            <section class="a-group">
+                <a href="#Home" class="mobile-a">Home</a>
+                <a href="#calculation" class="mobile-a">Hitung BMI</a>
+                <a href="#Result"class="mobile-a">Hasil</a>
+            </section>
+        </section>
+
+        <section class="toggle-mobile" role="button">
+            <img src="./images/toggle-menu.svg" alt="Menu" class="toggle-menu">
+        </section>
+    </nav>
+
+    <article class="intro" id="Home">
+        <header class="left-header">
+            <h1>Kalkulator <span class="colored-word">BMI</span></h1>
+            <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu?</p>
+            <a href="#calculation" class="btn-calc">Hitung Sekarang</a>
+        </header>
+
+        <header class="right-header">
+            <picture>
+                <source 
+                    srcset="./images/header-img-mobile.svg"
+                    media="(max-width: 1025px)"
+                />
+                <img src="./images/header-img.svg" alt="Header image"/>
+            </picture>
+        </header>
+    </article>
+
+    <main>
+        <form>
+            <h2 id="calculation" style="text-align: center;">Hitung BMI</h2>
+            <section class="genders gap">
+                <label class="label-container">
+                    <input type="radio" id="male" value="pria" checked/>
+                    <img src="./images/male.svg" alt="Pria"/>
+                    <label for="male" class="option">Pria</label>
+                </label>
+
+                <label class="label-container">
+                    <input type="radio" id="female" value="wanita"/>
+                    <img src="./images/female.svg" alt="Wanita"/>
+                    <label for="female" class="option">Wanita</label>
+                </label>
+            </section>
+
+            <section class="berat-badan gap">
+                <p>Berat Badan (kg)</p>
+                <section class="input-container">
+                    <label for="input-bb">
+                        <img src="./images/pen.svg" alt="pen" class="pen"/>
+                    </label>
+                    <input type="text" id="input-bb" inputmode="numeric" pattern="[0-9]+" maxlength="3" placeholder="Masukkan angka...">
+                </section>
+            </section>
+
+            <section class="usia gap">
+                <p>Usia (tahun) </p>
+                <section class="input-container">
+                    <label for="input-usia">
+                        <img src="./images/pen.svg" alt="pen" class="pen"/>
+                    </label>
+                    <input type="text" id="input-usia" inputmode="numeric" pattern="[0-9]+" maxlength="3" placeholder="Masukkan angka..." required>
+                </section>
+            </section>
+
+            <section class="tinggi-badan gap">
+                <p>Tinggi Badan (cm) </p>
+                <section class="input-container">
+                    <label for="input-tb">
+                        <img src="./images/pen.svg" alt="pen" class="pen"/>
+                    </label>
+                    <input type="text" id="input-tb" inputmode="numeric" pattern="[0-9]+" maxlength="3" placeholder="Masukkan angka..." required>
+                </section>
+            </section>
+
+            <section class="form-btn gap">
+                <button type="submit" class="calc">Hitung BMI</button>
+                <button type="reset" class="reset">Reset</button>
+            </section>
+        </form>
+
+        <article class="calculator-desc">
+            <p style="font-size: 1rem; font-weight: 500;">Keunggulan fitur</p>
+            <ol style="margin-left: 1.2rem;">
+                <li>Menghitung berat badan</li>
+                <li>Menentukan kategori berat badan ideal atau tidak</li>
+                <li>Mempersiapkan program penurunan berat badan</li>
+            </ol>
+            <p style="margin: 1rem 0rem;">Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+            <p style="margin-bottom: 1rem;">Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M2</p>
+        </article>
+
+
+        <section class="result-container" id="Result">
+            <section class="result-text-desc">
+                <article class="result-text">
+                    <h2 style="margin: 1rem 0rem;">Hasil Kalkulasi : </h2>
+                    <p style="font-size: 1.3rem; margin-top:1rem; color: #D4621E; font-weight: 500;" class="weight-category"></p>
+                    <p style="font-size: 4rem; font-weight: 500; margin: 1rem 0rem;" class="result-number">-</p>
+                    <p style="margin: 1rem 0rem; display: flex; justify-content: center;"><span class="weight-category" style="text-align: center; font-weight: 500;"></span></p>
+                    <a href="#calculation" class="hitung-lagi">Hitung Lagi</a>
+                </article>
+    
+                <article class="result-desc">
+                    <p class="data-ag"></p>
+                    <p><span style="font-size: 1.1rem; font-weight: 700;">Hasil BMI</span><span class="range" style="font-weight: 500;"></span> <br/> <br/>
+                        Anda berada dalam kategori <span class="weight-category" style="font-weight: 700;">-</span>.
+                        <br/><br/>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga.
+                        Jika BMI Anda berada dalam kategori berlebih atau obesitas maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.
+                    </p>
+    
+                    <span class="span-btn">
+                        <button>Konsultasi Ahli Gizi via Aplikasi</button>
+                        <button>Registrasi Online Ahli Gizi</button>
+                    </span>
+    
+                    <p class="text-after-span-btn">
+                        BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.
+                    </p>
+                    
+                </article>
+            </section>
+
+            <article class="disease">
+                <p>Beberapa penyakit yang berasal dari kelebihan berat badan</p>
+                <ul>
+                    <li>Diabetes</li>
+                    <li>Hipertensi</li>
+                    <li>Sakit Jantung</li>
+                    <li>Osteoarthritis</li>
+                </ul>
+                <span>
+                    <button>Konsultasi Dokter via Aplikasi</button>
+                    <button>Registrasi Online Sekarang</button>
+                </span>
+            </article>
+        </section>
+    </main>
+    
+    <section class="google-apple-badge">
+        <p style="font-size: 1.2rem; font-weight: 500;">Download Aplikasi</p>
+        <picture class="brand-badge">
+            <img src="./images/google-play.svg" alt="google-play" class="brand"/>
+            <img src="./images/app-store.svg" alt="google-play" class="brand"/>
+        </picture>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 created and coded by Alan Sadewa</p>
+    </footer>
+
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
+
+<!-- created by alan sadewa -->
