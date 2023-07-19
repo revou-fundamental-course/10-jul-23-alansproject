@@ -72,7 +72,7 @@ function handleSubmitClick(){
 
         // validasi lagi...
         if(category !== undefined){
-            textCategory.forEach((each, index) => each.textContent = index === 0 || index === 2 ? `${category}` : `Anda termasuk ${category}`) //Menampilkan category yang telah di filter ke dalam setiap class .weight-category
+            textCategory.forEach((each, index) => each.textContent = index === 0 || index === 2 ? `${category}` : `Anda dikategorikan ${category}`) //Menampilkan category yang telah di filter ke dalam setiap class .weight-category
             document.querySelector('.range').textContent = ` ${range}` //Menampilkan text range category berat badan
 
             // Menghindari button yang harus diklik dua kali agar pindahh di mobile device
