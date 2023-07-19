@@ -1,9 +1,7 @@
 # 10-jul-23-alansproject
 10-jul-23-alansproject created by GitHub Classroom
 
-This is the BMI Calculator web project, coded by me (Alan Sadewa). I found that it was a good place for practicing my design and interactivity
-knowledge in CSS and Javascript.
-
+This is the BMI Calculator web project, coded by me (Alan Sadewa). I find that it is a good place for practicing my design and interactivity knowledge in CSS and Javascript.
 I Created this project using these tools (without any frameworks):
 1. HTML
 2. CSS
